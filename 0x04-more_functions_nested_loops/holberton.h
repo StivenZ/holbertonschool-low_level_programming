@@ -21,3 +21,5 @@ void print_diagonal(int n);
 void print_square(int size);
 
 void _fizzbuzz(void);
+
+void print_triangle(int size);
