@@ -2,8 +2,9 @@
 #include "holberton.h"
 /**
  * main - exectes fizz
+ * Return: 0
 */
-int main (void)
+int main(void)
 {
 	_fizzbuzz();
 	return (0);
