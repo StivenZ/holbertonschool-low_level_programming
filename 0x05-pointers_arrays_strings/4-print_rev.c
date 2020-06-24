@@ -9,16 +9,17 @@ int i;
 int j;
 i = 0;
 
-/** Character count
-*/
+/** Character count */
+
 	while (s[i] != '\0')
 	{
 	i++;
 	}
-/** Reverse print
-*/
+
+/** Reverse print */
+
 j = i;
-	while(j >= 0)
+	while (j >= 0)
 	{
 	_putchar(s[j]);
 	j--;
