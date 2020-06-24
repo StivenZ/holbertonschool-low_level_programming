@@ -18,7 +18,7 @@ i = 0;
 
 /** Reverse print */
 
-j = i;
+j = i - 1;
 	while (j >= 0)
 	{
 	_putchar(s[j]);
