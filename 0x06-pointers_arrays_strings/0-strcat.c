@@ -4,12 +4,14 @@
  * @dest: parameter
  * @src: parameter
  * temp: copy pointer
+ * Return: string
 */
 char *_strcat(char *dest, char *src)
 {
 	char *temp;
+
 	temp = dest;
-	
+
 	while (*dest != '\0')
 	{
 		dest++;
