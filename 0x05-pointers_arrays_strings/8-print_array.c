@@ -3,7 +3,7 @@
 /**
  * print_array - prints n elements of an array
  * @a: pointer parameter
- * n: n elements to be printed
+ * @n: n elements to be printed
  * i: parameter
 */
 void print_array(int *a, int n)
