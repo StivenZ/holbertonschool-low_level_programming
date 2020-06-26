@@ -1,17 +1,15 @@
 #include "holberton.h"
 /**
- * *_strncat - Concatenates two strings
+ * _strncat - Concatenates two strings
  * @dest: parameter
  * @src: parameter
  * @n: parameter
- * i: temporary
- * j: parameter
- * k: parameter
+ * Return: string
 */
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, j, k;
-	
+
 	i = 0;
 
 	while (dest[i] != '\0')
@@ -21,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 
 j = i;
 k = 0;
-	while (i < (n + j) && (src[k] != '\0'))
+	while (i < (n + j) &&(src[k] != '\0'))
 	{
 		dest[i] = src[k];
 		i++;
