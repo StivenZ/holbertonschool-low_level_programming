@@ -2,10 +2,10 @@
 /**
  * *_strncpy - copies a string
  * @dest: parameter
- * @char: parameter
  * @src: parameter
  * @n: parameter
  * i: parameter
+ * Return: string
 */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -23,7 +23,7 @@ char *_strncpy(char *dest, char *src, int n)
 	src++;
 	i++;
 	}
-	
+
 	while (i < n)
 	{
 		*dest = '\0';
