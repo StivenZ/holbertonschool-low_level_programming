@@ -11,15 +11,16 @@ int i;
 
 i = 0;
 
-	while (i <= n)
+	while (i < n)
 	{
-		if (i < n)
+		if (i < n - 1)
 		{
 			printf("%d, ", a[i]);
 		}
-		else if (i == (n - 1))
+		else if (i == n - 1)
 		{
 			printf("%d\n", a[i]);
+			break;
 		}
 	i++;
 	}
