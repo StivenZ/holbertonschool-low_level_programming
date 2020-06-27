@@ -2,6 +2,7 @@
 /**
  * *string_toupper - Upercases the lowercases letter
  * @str: string input
+ * Return: string
 */
 char *string_toupper(char *str)
 {
