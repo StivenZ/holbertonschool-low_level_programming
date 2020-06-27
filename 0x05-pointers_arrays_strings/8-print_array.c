@@ -11,6 +11,10 @@ int i;
 
 i = 0;
 
+if (n < 0)
+{
+	n = -n;
+}
 	while (i < n)
 	{
 		if (i < n - 1)
