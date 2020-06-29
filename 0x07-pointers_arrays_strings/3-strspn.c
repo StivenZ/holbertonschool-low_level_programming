@@ -10,52 +10,27 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int k;
 
 	i = 0;
-	j = 0;
 	k = 0;
+	j = 0;
 
-while (accept[j] != '\0')
-{
-/**
- * If characters are the same, loops until they are different or
- * until end of string is reached.
-*/
-	if (s[i] == accept[j])
+	while (s[i] != '\0')
 	{
-		while (s[i] == accept[j])
+		if (s[i] == accept[j])
 		{
 			k++;
 			i++;
-
-			if (s[i] == '\0')
-			{
-				i = 0;
-				j++;
-			}
+			j = 0;
+			continue;
 		}
 
-		if ((s[i] == '\0') && (accept[j] == '\0'))
+		else if (s[i] != accept[j])
 		{
-			return (k);
-		}
-	}
-
-/**
- * If characters are different, loops until they are the same or
- * till end of string is reached.
-*/
-	else if (s[i] != accept[j])
-	{
-		while (s[i] != accept[j])
-		{
-			s++;
-			if ((s[i] == '\0') && (accept[j] == '\0'))
+			j++;
+			if (accept[j] == '\0')
 			{
-				return (k);
+				break;
 			}
 		}
 	}
-	
-
-}
-return (0);
+	return (k);
 }
