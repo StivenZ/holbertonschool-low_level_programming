@@ -3,6 +3,7 @@
  * _strspn - gets length of a prefix
  * @s: initial segment
  * @accept: string to copy bytes from
+ * Return: bytes of *S within *accept
 */
 unsigned int _strspn(char *s, char *accept)
 {
