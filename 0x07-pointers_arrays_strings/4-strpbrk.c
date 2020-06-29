@@ -4,7 +4,7 @@
  * inside *accept.
  * @s: string to find
  * @accept: where to seek
- * Return : a pointer to s
+ * Return: a pointer to s
 */
 char *_strpbrk(char *s, char *accept)
 {
