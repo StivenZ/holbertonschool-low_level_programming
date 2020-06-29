@@ -4,6 +4,7 @@
  * @s: pointed area to fill
  * @b: constant to fill space with
  * @n: numbers of bytes to fill
+ * Return: string s
 */
 char *_memset(char *s, char b, unsigned int n)
 {
