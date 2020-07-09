@@ -8,7 +8,7 @@
 */
 char *_strdup(char *str)
 {
-	if (str[0] == '\0')
+	if (str == NULL)
 	{
 		return ('\0');
 	}
@@ -20,12 +20,13 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
+	i--;
 
 	du = (char *)malloc(sizeof(char) * i);
 
 	if (!du)
 	{
-		return ('\0');
+		return (NULL);
 	}
 
 	i = 0;
