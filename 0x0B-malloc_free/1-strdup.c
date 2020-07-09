@@ -10,7 +10,7 @@ char *_strdup(char *str)
 {
 	if (str[0] == '\0')
 	{
-		return (NULL);
+		return ('\0');
 	}
 
 	int i = 0;
@@ -25,7 +25,7 @@ char *_strdup(char *str)
 
 	if (!du)
 	{
-		return (NULL);
+		return ('\0');
 	}
 
 	i = 0;
