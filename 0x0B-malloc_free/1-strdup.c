@@ -2,7 +2,6 @@
 #include <stdlib.h>
 /**
  * *_strdup - creates a pointer to a new space in memory with
- * a copy of the string given as a parameter
  * @str: string and pointer
  * Return: a pointer to a string
 */
