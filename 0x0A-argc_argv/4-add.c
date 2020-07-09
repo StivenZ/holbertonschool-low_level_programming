@@ -13,7 +13,6 @@ int main(int argc, char **argv)
 
 	j = 0;
 	i = 1;
-	k = 0;
 
 	if (argc < 2)
 	{
@@ -23,7 +22,8 @@ int main(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			while (isdigit(argv[i][k]) != 0)
+			k = 0;
+			while (argv[i][k] != '\0')
 			{
 				if (isdigit(argv[i][k]) == 0)
 				{
