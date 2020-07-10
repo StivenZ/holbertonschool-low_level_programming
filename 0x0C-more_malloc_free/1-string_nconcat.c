@@ -11,6 +11,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int bs1, bs2, bytes, i, j;
 	char *p;
 
+	i = 0;
 	bs1 = 0;
 	bs2 = 0;
 
@@ -41,6 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	bytes = (bs1 + n);
 
 	p = malloc(bytes);
+
 	if (!p)
 	{
 		return (NULL);
