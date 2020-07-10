@@ -21,11 +21,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (!s1)
 	{
-		s1 = "";
+		s1 = '\0';
 	}
 	if (!s2)
 	{
-		s2 = "";
+		s2 = '\0';
 	}
 
 /**
@@ -50,8 +50,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 		i++;
 	}
+
 	j = i;
 	i = 0;
+
 	while (j < bytes)
 	{
 		p[j] = s2[i];
