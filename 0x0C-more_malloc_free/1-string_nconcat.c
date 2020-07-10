@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = bs2;
 
 	bytes = (bs1 + n + 1);
-	p = malloc(bytes);
+	p = malloc(bytes * sizeof(char));
 	if (!p)
 		return (NULL);
 	while (i < bs1)
@@ -48,14 +48,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[i] = s1[i];
 		i++;
 	}
-	j = i;
-	i = 0;
-	while (j < bytes)
+	j = 0;
+	while (j < n)
 	{
-		p[j] = s2[i];
-		i++;
+		p[j + i] = s2[j];
 		j++;
 	}
-	p[j] = '\0';
+	p[j + i] = '\0';
 	return (p);
 }
