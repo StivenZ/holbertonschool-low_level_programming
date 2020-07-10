@@ -4,15 +4,27 @@
  * @s1: string 1
  * @s2: string 2
  * @n: memory size
+ * Return: pointer
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int bs1, bs2, bytes, i, j;
 	char *p;
 
-	i = 0;
-	bs1 = strlen(s1);
-	bs2 = strlen(s2);
+	bs1 = 0;
+	bs2 = 0;
+
+	while (s1[bs1] != '\0')
+	{
+		bs1++;
+	}
+printf("bs1 = %d\n", bs1);
+
+	while (s2[bs2] != '\0')
+	{
+		bs2++;
+	}
+printf("bs1 = %d\n", bs1);
 
 	if (n > bs2)
 	{
@@ -28,12 +40,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = '\0';
 	}
 
-/**
+/*
  * Determine the size of the final memory space
 */
 	bytes = (bs1 + n);
 
-/**
+/*
  * Allocate the memory space in p with @bytes
 */
 	p = malloc(bytes);
@@ -41,7 +53,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-/**
+/*
  * printf("bs1 = %d, and bs2 = %d\n, bytes = %d", bs1, bs2, bytes);
  * Copy the string
 */
