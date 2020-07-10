@@ -28,20 +28,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *p;
 
 	i = 0;
-	bs1 = 0;
-	bs2 = 0;
 
 	if (!s1)
-		s1 = '\0';
+		s1 = "";
 	if (!s2)
-		s2 = '\0';
+		s2 = "";
 	bs1 = sizes(s1);
 	bs2 = sizes(s2);
 
-	if (n > bs2)
+	if (n >= bs2)
 		n = bs2;
 
-	bytes = (bs1 + n);
+	bytes = (bs1 + n + 1);
 	p = malloc(bytes);
 	if (!p)
 		return (NULL);
@@ -58,5 +56,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 		j++;
 	}
+	p[j] = '\0';
 	return (p);
 }
