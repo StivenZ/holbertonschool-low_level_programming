@@ -18,13 +18,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		bs1++;
 	}
-printf("bs1 = %d\n", bs1);
 
 	while (s2[bs2] != '\0')
 	{
 		bs2++;
 	}
-printf("bs1 = %d\n", bs1);
 
 	if (n > bs2)
 	{
@@ -40,23 +38,14 @@ printf("bs1 = %d\n", bs1);
 		s2 = '\0';
 	}
 
-/*
- * Determine the size of the final memory space
-*/
 	bytes = (bs1 + n);
 
-/*
- * Allocate the memory space in p with @bytes
-*/
 	p = malloc(bytes);
 	if (!p)
 	{
 		return (NULL);
 	}
-/*
- * printf("bs1 = %d, and bs2 = %d\n, bytes = %d", bs1, bs2, bytes);
- * Copy the string
-*/
+
 	while (i < bs1)
 	{
 		p[i] = s1[i];
