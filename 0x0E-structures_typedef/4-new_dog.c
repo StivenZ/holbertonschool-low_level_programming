@@ -1,5 +1,4 @@
 #include "dog.h"
-#include <stdlib.h>
 /**
  * *_strcpy - copies a string
  * @dest: parameter
@@ -63,6 +62,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!new)
 	{
 		free(new);
+		free(ocpy);
+		free(ncpy);
 		return (NULL);
 	}
 
