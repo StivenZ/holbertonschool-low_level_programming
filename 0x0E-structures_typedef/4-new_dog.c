@@ -41,35 +41,37 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *ncpy, *ocpy;
 	int i, j;
 
+	new = malloc(sizeof(dog_t));
+
+	if (!new)
+		return (NULL);
+
 	i = 0;
 	j = 0;
 	while (name[i++])
 	{; }
-	ncpy = malloc(sizeof(char) * i);
+	ncpy = malloc(sizeof(char) * (i + 1));
 	if (!ncpy)
-		return (NULL);
-	_strcpy(ncpy, name);
-
-	while (name[j++])
-	{; }
-	ocpy = malloc(sizeof(char) * j);
-	if (!ocpy)
-		return (NULL);
-	_strcpy(ocpy, owner);
-
-	new = malloc(sizeof(dog_t));
-
-	if (!new)
 	{
 		free(new);
-		free(ocpy);
+		return (NULL);
+	}
+	_strcpy(ncpy, name);
+
+	while (owner[j++])
+	{; }
+	ocpy = malloc(sizeof(char) * (j + 1));
+	if (!ocpy)
+	{
+		free(new);
 		free(ncpy);
 		return (NULL);
 	}
+	_strcpy(ocpy, owner);
 
-	(*new).name = name;
+	(*new).name = ncpy;
 	(*new).age = age;
-	(*new).owner = owner;
+	(*new).owner = ocpy;
 
 	return (new);
 }
