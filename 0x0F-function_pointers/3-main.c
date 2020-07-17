@@ -16,19 +16,19 @@ int main(int argc, char **argv)
 	if ((*argv[2] == '/' || *argv[2] == '%') && atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(100);
 	}
 	if (argc != 4)
 	{
 		printf("Error");
-		exit (98);
+		exit(98);
 	}
 
 	if (*argv[2] != '/' && *argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*'
 		&& *argv[2] != '%')
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	c = get_op_func(argv[2])(a, b);
 
