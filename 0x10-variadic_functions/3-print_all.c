@@ -38,7 +38,7 @@ while (format[i])
 			i++;
 			continue;
 	}
-	if (format[i + 1] != '\0')
+	if (format[i + 1])
 		printf(", ");
 	i++;
 }
