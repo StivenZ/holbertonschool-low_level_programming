@@ -11,6 +11,9 @@ list_t *add_node(list_t **head, const char *str)
 	char *strcopy;
 	size_t i = 0;
 
+	if (head == NULL)
+		return (NULL);
+
 	if (!str)
 		return (NULL);
 
