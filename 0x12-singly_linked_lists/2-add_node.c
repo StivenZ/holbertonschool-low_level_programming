@@ -22,6 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	strcopy = malloc((sizeof(char)) * (i));
+
 	if (!strcopy)
 		return (NULL);
 
@@ -37,5 +38,6 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->next = *head;
 	*head = new_node;
 
+	free(strcopy);
 	return (new_node);
 }
