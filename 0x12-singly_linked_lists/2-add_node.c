@@ -35,6 +35,7 @@ list_t *add_node(list_t **head, const char *str)
 		strcopy[i] = str[i];
 		i++;
 	}
+	strcopy[i] = '\0';
 
 	new_node->len = (i);
 	new_node->str = strcopy;
