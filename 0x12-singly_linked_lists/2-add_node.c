@@ -24,7 +24,7 @@ list_t *add_node(list_t **head, const char *str)
 		i++;
 	}
 
-	strcopy = malloc((sizeof(char)) * (i));
+	strcopy = malloc((sizeof(char)) * (i + 1));
 
 	if (!strcopy)
 		return (NULL);
