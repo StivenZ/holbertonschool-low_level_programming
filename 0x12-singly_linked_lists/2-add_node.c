@@ -27,18 +27,11 @@ list_t *add_node(list_t **head, const char *str)
 	char *strcopy;
 	int len;
 
+	len = length(str);
+
 	new_node = malloc(sizeof(list_t));
 
 	if (new_node == NULL)
-	{
-		return (NULL);
-	}
-
-	len = length(str);
-
-	strcopy = malloc((sizeof(char)) * len);
-
-	if (strcopy == NULL)
 	{
 		return (NULL);
 	}
