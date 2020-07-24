@@ -9,17 +9,11 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
 	char *strcopy;
-	size_t i = 0;
-
-	if (head == NULL)
-		return (NULL);
-
-	if (!str)
-		return (NULL);
+	unsigned int i = 0;
 
 	new_node = malloc(sizeof(list_t));
 
-	if (!new_node)
+	if (head == NULL || !str || !new_node)
 		return (NULL);
 
 	while (str[i] != '\0')
@@ -29,8 +23,10 @@ list_t *add_node(list_t **head, const char *str)
 
 	strcopy = malloc((sizeof(char)) * (i + 1));
 
-	if (!strcopy)
+	if (strcopy == NULL)
+	{
 		return (NULL);
+	}
 
 	i = 0;
 	while (str[i] != '\0')
