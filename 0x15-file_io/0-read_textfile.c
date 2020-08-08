@@ -29,7 +29,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	countr = read(fd, buf, letters);
 
-	countw = write(0, buf, letters);
+	if (countr == -1)
+	{
+		return (0);
+	}
+
+	countw = write(STDOUT_FILENO, buf, letters);
 
 	if (countw != letters)
 		return (0);
