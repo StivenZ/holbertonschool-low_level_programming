@@ -8,7 +8,7 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	size_t i;
+	ssize_t i;
 	ssize_t countw;
 
 	i = 0;
@@ -32,7 +32,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	countw = write(fd, text_content, i);
 
-	if (countw == -1)
+	if (countw == -1 || i != countw)
 	{
 		return (-1);
 	}
