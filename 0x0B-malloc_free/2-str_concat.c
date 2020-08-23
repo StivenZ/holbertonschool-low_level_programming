@@ -10,37 +10,31 @@ char *str_concat(char *s1, char *s2)
 	int len1, len2, i, j;
 	char *new_string;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	i = j = 0;
+	i = 0;
+	j = 0;
 
-	if ((len1 < 0) && (len2 < 0))
-	{
-		new_string = malloc(sizeof(char) * (len1 + len2 - 1));
-	}
+	new_string = malloc(sizeof(char) * (len1 + len2 + 1));
 
-	if (((len1 == 0) && (len2 < 0)) || ((len1 =< 0) && (len2 == 0)))
-	{
-		new_string = malloc(sizeof(char) * (len1 + len2));
-	}
-	else
-	{
-		new_string = malloc(sizeof(char));
-		if (!new_string)
-			return (NULL);
-		new_string[0] = '\0';
-		return (new_string);
-	}
-
-	if (!new_string)
+	if (new_string == NULL)
 		return (NULL);
 
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
 		new_string[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
+	while (s2[j] != '\0')
 	{
 		new_string[i + j] = s2[j];
 		j++;
@@ -49,7 +43,6 @@ char *str_concat(char *s1, char *s2)
 	new_string[i + j] = '\0';
 	return (new_string);
 }
-
 /**
  * _strlen - calculates length of the string
  * @str: pointer to string
@@ -67,5 +60,5 @@ int _strlen(char *str)
 		i++;
 	}
 
-	return (i + 1);
+	return (i);
 }
