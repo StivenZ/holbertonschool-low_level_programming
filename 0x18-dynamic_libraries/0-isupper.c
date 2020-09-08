@@ -13,8 +13,3 @@ int _isupper(int c)
 	return (0);
 
 }
-
-void main(void)
-{
-	_isupper(0);
-}
