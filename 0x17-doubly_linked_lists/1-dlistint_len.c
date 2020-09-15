@@ -6,18 +6,17 @@
 */
 size_t dlistint_len(const dlistint_t *h)
 {
-    const dlistint_t *tmp;
-    size_t i;
+	const dlistint_t *tmp;
+	size_t i;
 
-    tmp = h;
-    i = 0;
+	tmp = h;
+	i = 0;
 
-    while (tmp)
-    {
-        i++;
-        tmp = tmp->next;
-    }
+	while (tmp)
+	{
+		i++;
+		tmp = tmp->next;
+	}
 
-    return(i);
-
+	return (i);
 }
