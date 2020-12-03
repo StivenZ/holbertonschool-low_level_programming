@@ -1,21 +1,17 @@
 #include "lists.h"
 /**
- * free_dlistint - frees a list
- * @head: pointer the list
-*/
+ * free_dlistint - function that frees a db linked list
+ * @head: double pointer to ddlklist
+ * Return: void
+ */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *tmp = head;
+	dlistint_t *tmp;
 
-	if (!head)
+	while (head != NULL)
 	{
-		return;
+		tmp = head;
+		head = head->next;
+		free(tmp);
 	}
-
-	while (tmp->next)
-	{
-		tmp = tmp->next;
-		free(tmp->prev);
-	}
-	free(tmp);
 }
